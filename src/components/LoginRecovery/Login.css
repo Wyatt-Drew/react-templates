@@ -176,22 +176,32 @@
    * Registered and Unregistered user box and text
    */
   .user_options-registered,
-  .user_options-unregistered {
+  .user_options-unregistered,
+  .user_options-recovery  {
     width: 50%;
     padding: 75px 45px;
     color: #fff;
     font-weight: 300;
   }
   
+  .user_forms-recovery{
+    width: 100%;
+    padding: 75px 45px;
+    color: #fff;
+    font-weight: 300;
+  }
+  
   .user_registered-title,
-  .user_unregistered-title {
+  .user_unregistered-title,
+  .user_recovery-title {
     margin-bottom: 15px;
     font-size: 1.66rem;
     line-height: 1em;
   }
   
   .user_unregistered-text,
-  .user_registered-text {
+  .user_registered-text,
+  .user_recovery-text {
     font-size: 0.83rem;
     line-height: 1.4em;
   }
@@ -382,7 +392,9 @@
     }
   
     .user_options-registered,
-    .user_options-unregistered {
+    .user_options-unregistered,
+    .user_options-recovery,
+    .user_forms-recovery  {
       padding: 50px 45px;
     }
   }

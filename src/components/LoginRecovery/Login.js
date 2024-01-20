@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Login.css'; // Import your CSS file here
+import './Login.css';
 
 
 function LoginPage() {
@@ -16,22 +16,23 @@ function LoginPage() {
     return (
       <section className="user">
         <div className="user_options-container">
+ {/* Background area */}
           <div className="user_options-text">
             {/* Unregistered Users */}
             <div className="user_options-unregistered">
               <h2 className="user_unregistered-title">Don't have an account?</h2>
-              <p className="user_unregistered-text">Banjo tote bag bicycle rights, High Life sartorial cray craft beer whatever street art fap.</p>
+              <p className="user_unregistered-text">Sign up to get started!</p>
               <button className="user_unregistered-signup" onClick={handleSignUp}>Sign up</button>
             </div>
   
             {/* Registered Users */}
             <div className="user_options-registered">
               <h2 className="user_registered-title">Have an account?</h2>
-              <p className="user_registered-text">Banjo tote bag bicycle rights, High Life sartorial cray craft beer whatever street art fap.</p>
+              <p className="user_registered-text">Login to access your information.</p>
               <button className="user_registered-login" onClick={handleLogin}>Login</button>
             </div>
           </div>
-  
+  {/* Front area forms */}
           {/* Forms */}
           <div className={`user_options-forms ${isLoginActive ? 'bounceRight' : 'bounceLeft'}`}>
             {/* Login Form */}
