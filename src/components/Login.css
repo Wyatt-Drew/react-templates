@@ -248,6 +248,15 @@
     color: #e8716d;
     letter-spacing: 0.1rem;
   }
+  .forms_fields {
+    border: 2px solid #000000; /* Adjust the border color as desired */
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px; /* Rounded corners */
+    background-color: #fff; /* Background color */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Optional: adds a shadow for depth */
+}
+
   .user_options-forms .forms_field:not(:last-of-type) {
     margin-bottom: 20px;
   }
