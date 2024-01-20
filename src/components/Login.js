@@ -38,18 +38,19 @@ function LoginPage() {
             <div className="user_forms-login">
               <h2 className="forms_title">Login</h2>
               <form className="forms_form">
-                <div className="forms_fields">
-                    <div className="forms_field">
-                        <input type="text" placeholder="Username" required className="forms_field-input" />
-                    </div>
-                    <div className="forms_field">
-                        <input type="password" placeholder="Password" required className="forms_field-input" />
-                    </div>
-                </div>
-                <div className="forms_buttons">
-                    <button type="submit" className="forms_buttons-action">Login</button>
-                </div>
-            </form>
+    <div className="forms_fields">
+        <div className="forms_field">
+            <input type="text" placeholder="Username" required className="forms_field-input" />
+        </div>
+        <div className="forms_field">
+            <input type="password" placeholder="Password" required className="forms_field-input" />
+        </div>
+    </div>
+    <div className="forms_buttons">
+        <button className="forms_buttons-forgot">Forgot Password?</button>
+        <button type="submit" className="forms_buttons-action">Login</button>
+    </div>
+</form>
             </div>
   
             {/* Signup Form */}
