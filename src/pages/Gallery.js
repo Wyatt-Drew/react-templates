@@ -1,10 +1,10 @@
 import React from 'react';
 
-const ContactPage = () =>{
+const GalleryPage = () =>{
     return(
         <div>
             
         </div>
     );
 }
-export default ContactPage;
+export default GalleryPage;

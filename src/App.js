@@ -4,6 +4,7 @@ import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import ServicesPage from './pages/ServicesPage';
 import ContactPage from './pages/ContactPage';
+import QuotePage from './pages/QuotePage';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
@@ -12,10 +13,11 @@ function App() {
     <Router>
       <Navbar/>
       <Routes>
-        <Route path="/about" element={<HomePage />} />
-        <Route path="/" element={<AboutPage />} />
-        {/* <Route path="/services" element={<ServicesPage />} />
-        <Route path="/contact" element={<ContactPage />} /> */}
+        <Route path="/contact" element={<HomePage />} />
+        <Route path="/about" element={<AboutPage />} />
+        {/* <Route path="/services" element={<ServicesPage />} /> */}
+        {/* <Route path="/" element={<ContactPage />} /> */}
+        <Route path="/" element={<QuotePage />} />
       </Routes>
       <Footer/>
     </Router>

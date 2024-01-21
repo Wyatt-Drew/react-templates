@@ -1,0 +1,49 @@
+/* QuoteForm.css */
+.quote-form-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    margin: auto;
+}
+
+.quote-page img {
+    max-width: 300px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.quote-form {
+    width: 100%;
+}
+
+.quote-form h2,
+.quote-form p {
+    text-align: center;
+}
+
+.quote-form input,
+.quote-form textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.quote-form button {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
