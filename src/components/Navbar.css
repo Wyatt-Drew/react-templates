@@ -1,37 +1,49 @@
-h1 {
-
-}
-
-ul {
-    list-style-type: none;
-}
-
-li {
-    margin-top: 10px
-}
-
-a {
-    text-decoration: none;
-    color: #24b47e;
-}
-
-a:hover {
-    opacity: 0.5;
-}
-
-a:visited {
-    color: #6b7c93;
-}
-
-.header {
-    display: grid;
-    grid-template-columns: 100px auto 100px;
-    grid-template-rows: 80px;
-    background: #fff;
-}
-
-.logo {
-    height: 70px;
-    margin-left: 20px;
-    margin-top: 5px
-}
+.navbar {
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  .navbar-item {
+    cursor: pointer;
+    position: relative;
+    padding: 5px;
+    transition: color 0.3s;
+    border-bottom: 2px solid transparent; /* Ensures consistent height */
+  }
+  
+  .navbar-item:hover,
+  .navbar-item:focus {
+    color: #ffd700; /* Gold color for indication */
+    border-bottom: 2px solid #ffd700;
+  }
+  
+  .dropdown {
+    position: absolute;
+    top: calc(100% + 2px); /* Adjusted to start right at the bottom of the navbar */
+    left: 0;
+    background-color: #f9f9f9;
+    border-radius: 0 0 8px 8px; /* Curved edges at the bottom */
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    display: block;
+    opacity: 0;
+    visibility: hidden; /* Initially hidden */
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    color: black;
+    padding: 12px 16px;
+  }
+  
+  .navbar-item:hover .dropdown,
+  .navbar-item:focus .dropdown {
+    opacity: 1;
+    visibility: visible; /* Show dropdown */
+  }
+  
