@@ -24,7 +24,8 @@ const Navbar = () => {
     <nav className="navbar">
       <NavItem title="Home" />
       <NavItem title="About" />
-      <NavItem title="Services" dropdownContent={<div>            <ul style={{listStyleType: 'none'}}>
+      <NavItem title="Services" />
+      <NavItem title="Contact Us" dropdownContent={<div>            <ul style={{listStyleType: 'none'}}>
               <li>
                 <a href="mailto:MyCorporateEmail@gmail.com">Email</a>
               </li>
@@ -38,7 +39,7 @@ const Navbar = () => {
                 <a href="https://twitter.com/MyCorporateTwitter">Careers</a>
               </li>
             </ul></div>} />
-      <NavItem title="Contact" />
+      
     </nav>
   );
 };
