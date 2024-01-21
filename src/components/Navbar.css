@@ -1,49 +1,92 @@
+/* Styling for Navbar */
 .navbar {
+    width: 100%;
     background-color: #333;
-    color: white;
     display: flex;
     justify-content: space-around;
-    padding: 10px;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-  }
-  
-  .navbar-item {
-    cursor: pointer;
+    align-items: stretch; 
+    padding: 0; 
     position: relative;
-    padding: 5px;
-    transition: color 0.3s;
-    border-bottom: 2px solid transparent; /* Ensures consistent height */
   }
   
-  .navbar-item:hover,
-  .navbar-item:focus {
-    color: #ffd700; /* Gold color for indication */
-    border-bottom: 2px solid #ffd700;
+  .nav-item {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-align: center; 
+    padding: 10px 20px; 
+    position: relative;
+    display: flex; 
+    justify-content: center; 
+    flex-direction: column; 
+  }
+  
+  .nav-item:hover {
+    background-color: #007bff;
+    color: white;
+    /* text-decoration: underline; */
+    font-weight: bold;
+  }
+  
+  .nav-item:hover .dropdown, 
+  .dropdown:hover {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
   }
   
   .dropdown {
+    
+    opacity: 0;
+    visibility: hidden;
     position: absolute;
-    top: calc(100% + 2px); /* Adjusted to start right at the bottom of the navbar */
-    left: 0;
+    top: 100%;
     background-color: #f9f9f9;
-    border-radius: 0 0 8px 8px; /* Curved edges at the bottom */
-    min-width: 160px;
+    /* min-width: 160px; */
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+    border-radius: 8px;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    transform: translateY(-50%); 
+    text-align: center; 
+    white-space: nowrap;
+    width: 100%;
+    left: 0;
+    box-sizing: border-box;
+    padding: 0;
     display: block;
-    opacity: 0;
-    visibility: hidden; /* Initially hidden */
-    transition: opacity 0.5s ease, visibility 0.5s ease;
+    align-items: stretch; 
+  }
+  
+  .dropdown li {
+    /* width: 100%;  */
+    transition: background-color 0.3s ease;
+    display: block;
+    padding: 5px 0px;
+    margin: 0;
+  }
+  
+  .dropdown a {
+    display: block; 
+    text-decoration: none;
     color: black;
-    padding: 12px 16px;
-  }
+    transition: background-color 0.3s ease;
+    padding: 5px 0px; 
+    width: 100%; 
+}
+
   
-  .navbar-item:hover .dropdown,
-  .navbar-item:focus .dropdown {
-    opacity: 1;
-    visibility: visible; /* Show dropdown */
-  }
-  
+.dropdown li:hover {
+    background-color: lightblue; 
+    /* text-decoration: underline; */
+    /* color: green; */
+}
+.dropdown ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}

@@ -1,32 +1,45 @@
-import React, { useState } from 'react';
-import './Navbar.css'; // This will be our CSS file for styling
+// React Navbar Component
+import React from 'react';
+import './Navbar.css';
 
-const NavbarItem = ({ title, dropdownContent }) => {
-  const [hover, setHover] = useState(false);
-
+const Dropdown = ({ children }) => {
   return (
-    <div className="navbar-item" onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
+    <div className="dropdown">
+      {children}
+    </div>
+  );
+};
+
+const NavItem = ({ title, dropdownContent }) => {
+  return (
+    <div className="nav-item">
       {title}
-      {hover && dropdownContent && (
-        <div className="dropdown">
-          {dropdownContent}
-        </div>
-      )}
+      {dropdownContent && <Dropdown>{dropdownContent}</Dropdown>}
     </div>
   );
 };
 
 const Navbar = () => {
   return (
-    <div className="navbar">
-      <NavbarItem title="Home" />
-      <NavbarItem title="About" />
-      <NavbarItem 
-        title="Services" 
-        dropdownContent={<div>Service 1<br />Service 2<br />Service 3</div>} 
-      />
-      <NavbarItem title="Contact" />
-    </div>
+    <nav className="navbar">
+      <NavItem title="Home" />
+      <NavItem title="About" />
+      <NavItem title="Services" dropdownContent={<div>            <ul style={{listStyleType: 'none'}}>
+              <li>
+                <a href="mailto:MyCorporateEmail@gmail.com">Email</a>
+              </li>
+              <li>
+                <a href="https://facebook.com/MyCorporateFacebook">Facebook</a>
+              </li>
+              <li>
+                <a href="https://twitter.com/MyCorporateTwitter">Twitter</a>
+              </li>
+              <li>
+                <a href="https://twitter.com/MyCorporateTwitter">Careers</a>
+              </li>
+            </ul></div>} />
+      <NavItem title="Contact" />
+    </nav>
   );
 };
 
