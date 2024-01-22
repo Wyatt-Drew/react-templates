@@ -1,11 +1,18 @@
 import React, { useState } from 'react';
 import './LoginPage.css';
+import { GoogleLogin } from 'react-google-login';
 
 
 function Login2() {
     const [mode, setMode] = useState('login');
     const [prevMode, setPrevMode] = useState(null);
 
+    const responseGoogle = (response) => {
+      console.log('Login Success:', response);
+    }
+    const handleLoginFailure = (response) => {
+      console.error('Login Failed:', response);
+    }
     const changeMode = (newMode) => {
       setPrevMode(mode);
       setMode(newMode);
@@ -64,6 +71,14 @@ function Login2() {
                     <button type="submit" className="form-button">Login</button>
                 </div>
             </form>
+            <GoogleLogin
+            clientId="1006701555637-gbo2ft2d502s9uae8mut6adrdennfv4d.apps.googleusercontent.com"
+            buttonText="Continue with Google"
+            onSuccess={responseGoogle}
+            onFailure={handleLoginFailure}
+            cookiePolicy={'single_host_origin'}
+            className="google-button"
+            />
             </div>
             <div className = "signup-form">
             {/* Signup Form */}
