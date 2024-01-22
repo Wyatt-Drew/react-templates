@@ -4,11 +4,28 @@ import './Login2.css';
 
 function Login2() {
     const [mode, setMode] = useState('login');
-  
+    const [prevMode, setPrevMode] = useState(null);
+
     const changeMode = (newMode) => {
+      setPrevMode(mode);
       setMode(newMode);
-    }
+    };
   
+    const getAnimationClass = () => {
+      if (mode === 'signup') return 'moveToLeft';
+      if (mode === 'login') return 'moveToRight';
+      if (mode === 'recovery' && prevMode === 'signup') return 'moveToCenter';
+      if (mode === 'recovery' && prevMode === 'login') return 'moveToCenterFromRight';
+      return '';
+    };
+    const getPositionClass = () => {
+        if (mode === 'signup') return 'bounceLeft';
+        if (mode === 'login') return 'bounceRight';
+        if (mode === 'recovery') return 'bounceMiddle';
+
+        return '';
+      };
+
     return (
 
       <section className="user">
@@ -26,7 +43,7 @@ function Login2() {
               <button className="banner-button" onClick={() => changeMode('login')}>Login</button>
             </div>
         </div>
-        <div className={`user-form ${mode === 'signup' ? 'bounceLeft' : mode === 'recovery' ? 'bounceMiddle' : 'bounceRight'}`}>
+        <div className={`user-form ${getAnimationClass() } ${getPositionClass() }`}>
             <div className = "login-form">
                 <h2 className="forms_title">Login</h2>
                 <form className="forms_form">
@@ -66,6 +83,22 @@ function Login2() {
               </form>
             </div>
             </div>
+            {/* Recovery Form */}
+            <div className = "recovery-form">
+                <h2 className="forms_title">Recovery</h2>
+                <form className="forms_form">
+                <div className="form_fields">
+                    <div className="form_field">
+                        <input type="text" placeholder="Email" required className="forms_field-input" />
+                    </div>
+                </div>
+                <div className="forms_buttons">
+                    <button type="submit" className="form-button">Send</button>
+                </div>
+            </form>
+            </div>
+            
+            
         </div>
         
       </section>

@@ -124,6 +124,8 @@
     transition: -webkit-transform 0.4s ease-in-out;
     transition: transform 0.4s ease-in-out;
     transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
+    display: grid;
+    align-content: center;
 }
 .form_fields {
     border: 1px solid #000000c9; 
@@ -144,9 +146,10 @@
     -webkit-transition: border-color 0.2s ease-in-out;
     transition: border-color 0.2s ease-in-out;
 }
-.login-form, .signup-form, recovery-form{
+.login-form, .signup-form, .recovery-form{
     width:80%;
     margin: auto;
+    
 }
 input {
     background-color: transparent;
@@ -196,3 +199,79 @@ input {
 .bounceRight .login-form {
   display: block;
 }
+/* Animations */
+.user-form.moveToLeft {
+    animation: moveToLeft 1s forwards;
+  }
+  
+  .user-form.moveToRight {
+    animation: moveToRight 1s forwards;
+  }
+  
+  .user-form.moveToCenter {
+    animation: moveToCenter 1s forwards;
+  }
+  
+  .user-form.moveToCenterFromRight {
+    animation: moveToCenterFromRight 1s forwards;
+  }
+  @keyframes moveToLeft {
+    0% {
+        -webkit-transform: translate3d(100%, -50%, 0);
+        transform: translate3d(100%, -50%, 0);
+      }
+      50% {
+        -webkit-transform: translate3d(-30px, -50%, 0);
+        transform: translate3d(-30px, -50%, 0);
+      }
+      100% {
+        -webkit-transform: translate3d(0, -50%, 0);
+        transform: translate3d(0, -50%, 0);
+      }
+    }
+  
+  @keyframes moveToRight {
+    0% {
+        -webkit-transform: translate3d(0, -50%, 0);
+        transform: translate3d(0, -50%, 0);
+      }
+      50% {
+        -webkit-transform: translate3d(calc(100% + 30px), -50%, 0);
+        transform: translate3d(calc(100% + 30px), -50%, 0);
+      }
+      100% {
+        -webkit-transform: translate3d(100%, -50%, 0);
+        transform: translate3d(100%, -50%, 0);
+      }
+    }
+  
+  @keyframes moveToCenter {
+    0% {
+        -webkit-transform: translate3d(0, -50%, 0);
+        transform: translate3d(0, -50%, 0);
+      }
+    50% {
+      -webkit-transform: translate3d(calc(50% + 30px), -50%, 0);
+      transform: translate3d(calc(50% + 30px), -50%, 0);
+    }
+    100% {
+      -webkit-transform: translate3d(50%, -50%, 0);
+      transform: translate3d(50%, -50%, 0);
+    }
+  }
+  
+  @keyframes moveToCenterFromRight {
+    0% {
+        -webkit-transform: translate3d(100%, -50%, 0);
+        transform: translate3d(100%, -50%, 0);
+      }
+    50% {
+      -webkit-transform: translate3d(calc(50% - 30px), -50%, 0);
+      transform: translate3d(calc(50% - 30px), -50%, 0);
+    }
+    100% {
+      -webkit-transform: translate3d(50%, -50%, 0);
+      transform: translate3d(50%, -50%, 0);
+    }
+  }
+  
