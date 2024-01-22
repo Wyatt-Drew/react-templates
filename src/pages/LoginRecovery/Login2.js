@@ -29,7 +29,7 @@ function Login2() {
     return (
 
       <section className="user">
-        <div className = "back-banner">
+        <div className = {`back-banner ${getPositionClass() }`}>
             {/* Unregistered Users */}
             <div className="half-banner">
               <h2 className="banner-title">Don't have an account?</h2>
