@@ -22,9 +22,9 @@
 
   /* Back banner */
   .back-banner{
-    /* display: flex;
+    display: flex;
     justify-content: space-between;
-    align-items: center;  */
+    align-items: center; 
     background-color: rgba(34, 34, 34, 0.85);
     border-radius: 3px;
     width: 80%;   
@@ -33,19 +33,24 @@
 
     color: #fff;
     font-weight: 300;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr; 
   }
-.half-banner {
-    grid-column: 2 / span 2; 
+.half-banner{
+    flex: 1;
+    padding: 75px 45px;
 }
-  .bounceMiddle .half-banner {
-    grid-column: span 1;
+.right-banner{
+    margin-left: 15%;
 }
-
+.spacer{
+    display: none;
+}
+.bounceMiddle .spacer{
+    display:block;
+}
 
 .banner-title{
     font-size: 25px;
+    line-height: 30px;
 }
 .banner-button{
     background-color: transparent;
@@ -221,6 +226,12 @@ input {
   .user-form.moveToCenterFromRight {
     animation: moveToCenterFromRight 1s forwards;
   }
+  .user-form.moveFromCentertoLeft {
+    animation: moveFromCentertoLeft 1s forwards;
+  }
+  .user-form.moveFromCentertoRight {
+    animation: moveFromCentertoRight 1s forwards;
+  }
   :root {
     /* (80% - 45%) / 2 + 10% = 27.5% */
     --left: 27.5%; 
@@ -287,3 +298,35 @@ input {
     }
   }
   
+  @keyframes moveFromCentertoRight {
+    0% {
+
+        -webkit-transform: translate3d(var(--middle), -43%, 0);
+        transform: translate3d(var(--middle), -43%, 0);
+      }
+    50% {
+      -webkit-transform: translate3d(calc(var(--right) + 30px), -43%, 0);
+      transform: translate3d(calc(var(--right) + 30px), -43%, 0);
+    }
+    100% {
+        -webkit-transform: translate3d(var(--right), -43%, 0);
+        transform: translate3d(var(--right), -43%, 0);
+    }
+  }
+
+  @keyframes moveFromCentertoLeft {
+    0% {
+
+        -webkit-transform: translate3d(var(--middle), -43%, 0);
+        transform: translate3d(var(--middle), -43%, 0);
+      }
+    50% {
+      -webkit-transform: translate3d(calc(var(--left) - 30px), -43%, 0);
+      transform: translate3d(calc(var(--left) - 30px), -43%, 0);
+    }
+    100% {
+        -webkit-transform: translate3d(var(--left), -43%, 0);
+        transform: translate3d(var(--left), -43%, 0);
+    }
+  }
+ 

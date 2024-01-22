@@ -12,7 +12,9 @@ function Login2() {
     };
   
     const getAnimationClass = () => {
+      if (mode === 'signup' && prevMode === 'recovery') return 'moveFromCentertoLeft';
       if (mode === 'signup') return 'moveToLeft';
+      if (mode === 'login' && prevMode === 'recovery') return 'moveFromCentertoRight';
       if (mode === 'login') return 'moveToRight';
       if (mode === 'recovery' && prevMode === 'signup') return 'moveToCenter';
       if (mode === 'recovery' && prevMode === 'login') return 'moveToCenterFromRight';
@@ -36,8 +38,10 @@ function Login2() {
               <p>Sign up to get started!</p>
               <button className="banner-button" onClick={() => changeMode('signup')}>Sign up</button>
             </div>
+            <div className = "spacer half-banner"></div>
+            <div className = "spacer half-banner"></div>
             {/* Registered Users */}
-            <div className="half-banner">
+            <div className="half-banner right-banner">
               <h2 className="banner-title">Have an account?</h2>
               <p>Login to access your information.</p>
               <button className="banner-button" onClick={() => changeMode('login')}>Login</button>
@@ -85,7 +89,8 @@ function Login2() {
             </div>
             {/* Recovery Form */}
             <div className = "recovery-form">
-                <h2 className="forms_title">Recovery</h2>
+                <h2 className="forms_title">Forgot your password?</h2>
+                <p>Enter your email address below and we'll get you back on track </p>
                 <form className="forms_form">
                 <div className="form_fields">
                     <div className="form_field">
