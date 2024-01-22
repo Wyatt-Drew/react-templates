@@ -1,23 +1,25 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import HomePage from './pages/HomePage';
-import AboutPage from './pages/AboutPage';
+import HomePage from './pages/Home/HomePage';
+import TeamPage from './pages/Home/TeamPage';
 import ServicesPage from './pages/ServicesPage';
 import ContactPage from './pages/ContactPage';
-import QuotePage from './pages/QuotePage';
+import QuotePage from './pages/Home/QuotePage';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import GalleryPage from './pages/GalleryPage';
 
 function App() {
   return (
     <Router>
       <Navbar/>
       <Routes>
-        <Route path="/contact" element={<HomePage />} />
-        <Route path="/about" element={<AboutPage />} />
+        <Route path="/" element={<GalleryPage />} />
+        {/* <Route path="/" element={<HomePage />} /> */}
+        {/* <Route path="/Team" element={<TeamPage />} /> */}
         {/* <Route path="/services" element={<ServicesPage />} /> */}
         {/* <Route path="/" element={<ContactPage />} /> */}
-        <Route path="/" element={<QuotePage />} />
+        {/* <Route path="/contact" element={<QuotePage />} /> */}
       </Routes>
       <Footer/>
     </Router>

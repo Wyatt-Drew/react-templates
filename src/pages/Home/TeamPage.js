@@ -1,8 +1,8 @@
 import React from 'react';
-import profile1 from '../assets/profile_pic.jpg';
-import './AboutPage.css';
+import profile1 from '../../assets/profile_pic.jpg';
+import './TeamPage.css';
 
-const AboutPage = () => {
+const TeamPage = () => {
     const employees = [
         { id: 1, name: 'Wyatt Drew', image: profile1 },
         { id: 2, name: 'Wyatt Drew', image: profile1 },
@@ -15,7 +15,7 @@ const AboutPage = () => {
     ];
 
     return (
-        <div className = "AboutPage">
+        <div className = "TeamPage">
             <h1>Meet Our Team</h1>
             <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '20px', padding: '20px' }}>
                 {employees.map(employee => (
@@ -29,4 +29,4 @@ const AboutPage = () => {
     );
 };
 
-export default AboutPage;
+export default TeamPage;

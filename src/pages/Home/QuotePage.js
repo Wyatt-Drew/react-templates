@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import picture from '../assets/farming.png';
+import picture from '../../assets/farming.png';
 import './QuotePage.css';
 
 function QuotePage() {
