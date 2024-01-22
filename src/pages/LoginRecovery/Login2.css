@@ -92,6 +92,11 @@
 .form-button:hover{
     background-color: #e14641;
 }
+.forms_buttons {
+    display: flex;
+    justify-content: space-between; 
+}
+
 /* Front form */
 .forms_title{
     margin-bottom: 45px;
