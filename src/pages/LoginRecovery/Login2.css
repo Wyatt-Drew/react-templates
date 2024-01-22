@@ -19,6 +19,8 @@
     background: url("https://image.freepik.com/free-photo/green-leaf-forest_1150-12333.jpg") no-repeat center;
     background-size: cover;
   }
+
+  /* Back banner */
   .back-banner{
     display: flex;
     justify-content: space-between;
@@ -56,4 +58,112 @@
 .banner-button:hover{
     color: rgba(34, 34, 34, 0.85);
     background-color: #ccc;
+}
+
+/* Front form Buttons*/
+
+.forgot-button {
+    background-color: transparent;
+    border:transparent;
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 0.1rem;
+    color: #ccc;
+    text-decoration: underline;
+    -webkit-transition: color 0.2s ease-in-out;
+    transition: color 0.2s ease-in-out;
+  }
+.forgot-button:hover {
+    color: #b3b3b3;
+  }
+.form-button{
+    background-color: #e8716d;
+    border:#e8716d;
+    border-radius: 3px;
+    padding: 10px 35px;
+    font-size: 1rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    -webkit-transition: background-color 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out;
+}
+.form-button:hover{
+    background-color: #e14641;
+}
+/* Front form */
+.forms_title{
+    margin-bottom: 45px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1em;
+    text-transform: uppercase;
+    color: #e8716d;
+    letter-spacing: 0.1rem;
+}
+.user-form{
+    z-index:10;
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    width: calc(50% - 30px);
+    min-height: 420px;
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 2px 0 15px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    -webkit-transform: translate3d(100%, -50%, 0);
+            transform: translate3d(100%, -50%, 0);
+    -webkit-transition: -webkit-transform 0.4s ease-in-out;
+    transition: -webkit-transform 0.4s ease-in-out;
+    transition: transform 0.4s ease-in-out;
+    transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
+}
+.form_fields {
+    border: 1px solid #000000c9; 
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fff; 
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
+}
+.form-field{
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    padding: 6px 20px 6px 6px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+    color: #ccc;
+    letter-spacing: 0.1rem;
+    -webkit-transition: border-color 0.2s ease-in-out;
+    transition: border-color 0.2s ease-in-out;
+}
+.login-form, .signup-form, recovery-form{
+    width:80%;
+    margin: auto;
+}
+input {
+    background-color: transparent;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 0.85rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.1rem;
+    color: #ccc;
+    
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    padding: 6px 20px 6px 6px;
+    font-size: 1rem;
+    -webkit-transition: border-color 0.2s ease-in-out;
+    transition: border-color 0.2s ease-in-out;
+  }
+ input:focus {
+    border-color: gray;
+  }
+  input::placeholder {
+    color: #ccc;
 }
