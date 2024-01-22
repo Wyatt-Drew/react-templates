@@ -7,7 +7,7 @@ import ContactPage from './pages/ContactPage';
 import QuotePage from './pages/Home/QuotePage';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import LoginPage from './pages/LoginRecovery/LoginPage';
+import Login2 from './pages/LoginRecovery/Login2';
 
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
     <Router>
       <Navbar/>
       <Routes>
-        <Route path="/" element={<LoginPage />} />
+        <Route path="/" element={<Login2 />} />
         {/* <Route path="/" element={<HomePage />} /> */}
         {/* <Route path="/Team" element={<TeamPage />} /> */}
         {/* <Route path="/services" element={<ServicesPage />} /> */}

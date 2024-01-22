@@ -1,0 +1,59 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    line-height: 1em;
+  }
+.user {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+            align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: url("https://image.freepik.com/free-photo/green-leaf-forest_1150-12333.jpg") no-repeat center;
+    background-size: cover;
+  }
+  .back-banner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    background-color: rgba(34, 34, 34, 0.85);
+    border-radius: 3px;
+    width: 80%;   
+    height: 50%;    
+    position: absolute;
+
+    color: #fff;
+    font-weight: 300;
+  }
+.half-banner{
+    flex: 1;
+    padding: 75px 45px;
+    
+}
+.banner-title{
+    font-size: 25px;
+}
+.banner-button{
+    background-color: transparent;
+    margin-top: 30px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 10px 30px;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 1em;
+    letter-spacing: 0.2rem;
+    -webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+.banner-button:hover{
+    color: rgba(34, 34, 34, 0.85);
+    background-color: #ccc;
+}

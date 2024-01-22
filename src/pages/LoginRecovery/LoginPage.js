@@ -4,6 +4,7 @@ import './LoginPage.css';
 
 function LoginPage() {
     const [isLoginActive, setIsLoginActive] = useState(true);
+    const [isResetActive, setIsResetActive] = useState(false);
   
     const handleSignUp = () => {
       setIsLoginActive(false);
@@ -11,6 +12,13 @@ function LoginPage() {
   
     const handleLogin = () => {
       setIsLoginActive(true);
+    }
+    const handleReset = () => {
+      setIsResetActive(true);
+    }
+  
+    const handleStopReset = () => {
+      setIsResetActive(false);
     }
   
     return (
