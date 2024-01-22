@@ -25,9 +25,9 @@ function QuotePage() {
     };
 
     return (
-        <div className = "quote-page">
-            <img src={picture} alt="Event" />
-            <div className="quote-form-container">
+        <div className = "container">
+            <img className = "image" src={picture} alt="Event" />
+            {/* <div className="quote-form-container"> */}
             
             <form className="quote-form" onSubmit={handleSubmit}>
                 <h2>Get a free quote</h2>
@@ -54,7 +54,7 @@ function QuotePage() {
                 </div>
                 <button type="submit">Send</button>
             </form>
-        </div>
+        {/* </div> */}
         </div>
     );
 }
