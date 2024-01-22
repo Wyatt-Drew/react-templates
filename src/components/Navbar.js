@@ -1,5 +1,6 @@
 // React Navbar Component
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Navbar.css';
 
 const Dropdown = ({ children }) => {
@@ -10,19 +11,25 @@ const Dropdown = ({ children }) => {
   );
 };
 
-const NavItem = ({ title, dropdownContent }) => {
-  return (
+const NavItem = ({ title, dropdownContent, to }) => {
+  const content = dropdownContent ? (
     <div className="nav-item">
       {title}
-      {dropdownContent && <Dropdown>{dropdownContent}</Dropdown>}
+      <Dropdown>{dropdownContent}</Dropdown>
     </div>
+  ) : (
+    <Link to={to} className="nav-item">
+      {title}
+    </Link>
   );
+
+  return content;
 };
 
 const Navbar = () => {
   return (
     <nav className="navbar">
-      <NavItem title="Home" />
+      <NavItem title="Home" to="/"/>
       <NavItem title="About" />
       <NavItem title="Services" />
       <NavItem title="Contact Us" dropdownContent={<div>            <ul style={{listStyleType: 'none'}}>
@@ -39,7 +46,7 @@ const Navbar = () => {
                 <a href="https://twitter.com/MyCorporateTwitter">Careers</a>
               </li>
             </ul></div>} />
-      
+            <NavItem title="Login" to="/login" />
     </nav>
   );
 };
