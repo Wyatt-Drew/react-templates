@@ -172,3 +172,27 @@ input {
   input::placeholder {
     color: #ccc;
 }
+/* Splitting forms */
+/* Initially hide all forms */
+.user-form > form {
+  display: none;
+}
+
+/* When bounce class is active, hide the other forms */
+/* right = login, left = signup, middle = recovery */
+.bounceLeft .login-form,
+.bounceLeft .recovery-form,
+.bounceMiddle .signup-form, 
+.bounceMiddle .login-form,
+.bounceRight .signup-form ,
+.bounceRight .recovery-form
+ {
+  display: none;
+}
+
+/* Rules to show a specific form for each class */
+.bounceLeft .signup-form,
+.bounceMiddle .recovery-form,
+.bounceRight .login-form {
+  display: block;
+}
