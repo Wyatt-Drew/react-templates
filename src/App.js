@@ -7,14 +7,14 @@ import ContactPage from './pages/ContactPage';
 import QuotePage from './pages/Home/QuotePage';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import GalleryPage from './pages/GalleryPage';
+import StoryPage from './pages/StoryPage';
 
 function App() {
   return (
     <Router>
       <Navbar/>
       <Routes>
-        <Route path="/" element={<GalleryPage />} />
+        <Route path="/" element={<StoryPage />} />
         {/* <Route path="/" element={<HomePage />} /> */}
         {/* <Route path="/Team" element={<TeamPage />} /> */}
         {/* <Route path="/services" element={<ServicesPage />} /> */}

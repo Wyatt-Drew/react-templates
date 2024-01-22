@@ -2,6 +2,7 @@ import React from 'react';
 import HeroSection from '../../components/HeroSection';
 import TeamPage from './TeamPage';
 import QuotePage from './QuotePage';
+import GalleryPage from './GalleryPage';
 
 // import Navbar from "../components/Navbar";
 // import Footer from './components/Footer';
@@ -13,6 +14,7 @@ const HomePage = () => {
     return (
         <div>
             <HeroSection />
+            <GalleryPage/>
             <QuotePage/>
             <TeamPage/>
             
