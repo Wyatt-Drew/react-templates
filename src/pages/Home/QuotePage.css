@@ -3,6 +3,8 @@
     display:grid;
     grid-template-columns: 1fr 2fr;
     gap: 10px;
+    background-color: #112A3C;
+    color:white;
 }
 .image {
     max-width: 100%;
@@ -13,6 +15,7 @@
 
 .quote-form {
     width: 100%;
+    
 }
 
 .quote-form h2,
@@ -29,6 +32,8 @@
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+    border:#294D69;
+    background-color: #294D69;
 }
 
 .quote-form button {

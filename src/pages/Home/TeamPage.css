@@ -1,13 +1,40 @@
 .TeamPage {
-    text-align:center;
-    padding-left:15%;
-    padding-right:15%;
+    text-align: center;
+    padding-left: 15%;
+    padding-right: 15%;
+    background-color: #294D69;
+    color: #ffffff;
+}
+h1 {
+    margin-top: 0;
+    padding-top: 4%;
+}
+.EmployeeContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
 }
 
-.EmployeeCard{
+.EmployeeCard {
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 15px;
     text-align: center;
     width: 200px;
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    color:black;
+}
+
+.EmployeeCard:hover {
+    transform: translateY(-5px);
+}
+
+.EmployeeCard img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
 }

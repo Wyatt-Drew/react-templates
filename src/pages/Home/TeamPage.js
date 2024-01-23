@@ -15,12 +15,12 @@ const TeamPage = () => {
     ];
 
     return (
-        <div className = "TeamPage">
+        <div className="TeamPage">
             <h1>Meet Our Team</h1>
-            <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '20px', padding: '20px' }}>
+            <div className="EmployeeContainer">
                 {employees.map(employee => (
-                    <div className = "EmployeeCard" key={employee.id} >
-                        <img src={employee.image} alt={employee.name} style={{ width: '100%', height: 'auto', borderRadius: '50%' }} />
+                    <div className="EmployeeCard" key={employee.id}>
+                        <img src={employee.image} alt={employee.name} />
                         <h3>{employee.name}</h3>
                     </div>
                 ))}
