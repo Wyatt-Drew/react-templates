@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import './LoginPage.css';
 import { GoogleLogin } from 'react-google-login';
 
@@ -17,7 +18,11 @@ function Login2() {
       setPrevMode(mode);
       setMode(newMode);
     };
-  
+    const location = useLocation();
+    useEffect(() => {
+      setMode('login');
+      setPrevMode('null');
+    }, [location]);
     const getAnimationClass = () => {
       if (mode === 'signup' && prevMode === 'recovery') return 'moveFromCentertoLeft';
       if (mode === 'signup') return 'moveToLeft';
