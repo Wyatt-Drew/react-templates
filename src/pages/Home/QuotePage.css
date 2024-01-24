@@ -24,15 +24,22 @@
 }
 
 .quote-form input,
-.quote-form textarea {
+.quote-form textarea,
+.quote-form select {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
-    border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
     border:#294D69;
+    background-color: #294D69;
+    color:white;
+}
+
+.quote-form input:focus,
+.quote-form select:focus {
+    border: 1px solid  #4B86B4;
     background-color: #294D69;
 }
 
