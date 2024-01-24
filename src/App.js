@@ -6,7 +6,7 @@ import ServicesPage from './pages/ServicesPage';
 import QuotePage from './pages/Home/QuotePage';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import LoginPage from './pages/LoginRecovery/LoginPage';
+import LoginPage from './pages/LoginPage/LoginPage';
 
 
 function App() {

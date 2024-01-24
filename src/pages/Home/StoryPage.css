@@ -1,12 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
 
 .StoryPage {
-    /* width: 100vw; */
     height: 100vh;
     display: flex;
     align-items: center; 
     justify-content: center; 
-    /* padding: 20px;  */
     background: #f0f0f0; 
     color: white; 
     font-family: 'Arial', sans-serif; 

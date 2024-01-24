@@ -144,7 +144,6 @@
     position: absolute;
     top: 50%;
     left: 0%;
-    /* width: calc(45% - 30px); */
     width: 45%;
     min-height: 420px;
     background-color: #fff;
