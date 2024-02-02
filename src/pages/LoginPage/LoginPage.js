@@ -4,7 +4,7 @@ import './LoginPage.css';
 import { GoogleLogin } from 'react-google-login';
 
 
-function Login2() {
+function Login() {
     const [mode, setMode] = useState('login');
     const [prevMode, setPrevMode] = useState(null);
 
@@ -130,4 +130,4 @@ function Login2() {
     );
   }
   
-  export default Login2;
+  export default Login;

@@ -15,7 +15,7 @@ const TeamPage = () => {
     ];
 
     return (
-        <div className="TeamPage">
+    <div className="TeamPage">
     <h1>Meet Our Team</h1>
     <div className="EmployeeContainer">
         {employees.map(employee => (

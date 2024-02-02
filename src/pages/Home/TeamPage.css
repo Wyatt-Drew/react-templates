@@ -32,15 +32,15 @@ h1 {
 
 
 .EmployeeCard:hover img {
-    transform: translateX(10px); /* Move the image to the right on hover */
+    transform: translateX(10px);
 }
 .EmployeeCard img {
-    width: 120%; /* Increase the image width to cover the entire box */
+    width: 120%; 
     height: auto;
     display: block;
     position: relative;
-    left: -10px; /* Move the image to the left by 10px to offset the rightward translation */
-    transition: transform 1s ease; /* Add transition for transform */
+    left: -10px; 
+    transition: transform 1s ease; 
 }
 
 .EmployeeCardOverlay {
@@ -75,3 +75,5 @@ h1 {
 .EmployeeCard:hover .EmployeeCardOverlay h3 {
     transform: translateX(-25%);
 }
+
+  
