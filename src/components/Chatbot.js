@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 
 function Chatbot() {
   useEffect(() => {
-    try {
       const script = document.createElement('script');
       script.text = `
         window.embeddedChatbotConfig = {
@@ -25,15 +24,6 @@ function Chatbot() {
       };
 
       document.head.appendChild(chatbotScript);
-
-      return () => {
-        // Clean up the script when the component unmounts
-        document.head.removeChild(script);
-        document.head.removeChild(chatbotScript);
-      };
-    } catch (error) {
-      console.error('Error loading Chatbot:', error);
-    }
   }, []);
 
   return (

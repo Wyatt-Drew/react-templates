@@ -1,5 +1,6 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+// import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Routes, Route, HashRouter } from "react-router-dom";
 import HomePage from './pages/Home/HomePage';
 import TeamPage from './pages/Home/TeamPage';
 import ServicesPage from './pages/ServicesPage';
@@ -12,7 +13,7 @@ import Chatbot from './components/Chatbot';
 
 function App() {
   return (
-    <Router>
+    <HashRouter>
       <Navbar/>
       <Routes>
         <Route path="/login" element={<LoginPage />} />
@@ -26,7 +27,7 @@ function App() {
       <Chatbot/>
 
 
-    </Router>
+    </HashRouter>
   );
 }
 
