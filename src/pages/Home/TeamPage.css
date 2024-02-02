@@ -13,28 +13,65 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
     gap: 20px;
     padding: 20px;
 }
 
 .EmployeeCard {
+    position: relative;
     border: 1px solid #ddd;
     border-radius: 8px;
-    padding: 15px;
+    overflow: hidden;
     text-align: center;
     width: 200px;
     background-color: white;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    color:black;
+    color: black;
 }
 
-.EmployeeCard:hover {
-    transform: translateY(-5px);
-}
 
+.EmployeeCard:hover img {
+    transform: translateX(10px); /* Move the image to the right on hover */
+}
 .EmployeeCard img {
-    width: 100%;
+    width: 120%; /* Increase the image width to cover the entire box */
     height: auto;
-    border-radius: 50%;
+    display: block;
+    position: relative;
+    left: -10px; /* Move the image to the left by 10px to offset the rightward translation */
+    transition: transform 1s ease; /* Add transition for transform */
+}
+
+.EmployeeCardOverlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 200%;
+    height:100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 0 0 8px 8px;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s ease;
+}
+.EmployeeCardOverlay h3 {
+    transition: transform 1s ease;
+    transform: translateX(-100%);
+    width: 80%; 
+    padding:25%;
+    margin-left:10px;
+    overflow: hidden; 
+    white-space: normal;
+    word-wrap: break-word; 
+}
+.EmployeeCard:hover .EmployeeCardOverlay {
+    visibility: visible;
+    opacity: 1;
+}
+
+.EmployeeCard:hover .EmployeeCardOverlay h3 {
+    transform: translateX(-25%);
 }

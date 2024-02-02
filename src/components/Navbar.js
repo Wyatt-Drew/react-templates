@@ -35,7 +35,7 @@ const Navbar = () => {
       <NavItem title="Home" to="/"/>
       <NavItem title="About" />
       <NavItem title="Services" />
-      <NavItem title="Contact Us" dropdownContent={<div>            <ul style={{listStyleType: 'none'}}>
+      <NavItem title="Contact Us" dropdownContent={<div><ul style={{listStyleType: 'none'}}>
               <li>
                 <a href="mailto:MyCorporateEmail@gmail.com">Email</a>
               </li>
