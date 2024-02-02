@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
+import logo from '../assets/generic-logo.jpg';
 
 const Dropdown = ({ children }) => {
   return (
@@ -28,6 +29,9 @@ const NavItem = ({ title, dropdownContent, to }) => {
 const Navbar = () => {
   return (
     <nav className="navbar">
+                      <Link to="/" className='nav-item logo-container'>
+                    <img src={logo} className='logo'/> 
+                </Link>
       <NavItem title="Home" to="/"/>
       <NavItem title="About" />
       <NavItem title="Services" />
