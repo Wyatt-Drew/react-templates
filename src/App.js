@@ -8,7 +8,6 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import LoginPage from './pages/LoginPage/LoginPage';
 import Chatbot from './components/Chatbot';
-import ChatbotScript from './components/ChatbotScript';
 
 
 function App() {
@@ -24,11 +23,8 @@ function App() {
         {/* <Route path="/contact" element={<QuotePage />} /> */}
       </Routes>
       <Footer/>
-      <div>
-      <Chatbot></Chatbot>
-      {/* <ChatbotScript></ChatbotScript> */}
+      <Chatbot/>
 
-      </div>
 
     </Router>
   );
