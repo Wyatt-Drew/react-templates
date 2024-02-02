@@ -33,13 +33,11 @@ const JoinCommunityPopup = () => {
 
   return (
     <div className="popupContainer">
-      <div className = "column">
-      <img className = 'productImage' src={productImage}/>
-      </div>
-      <div className = "column">
-        <div className="popup">
+      <div className="popup">
           <button className="exitButton" onClick={handleClose}>X</button>
-          <h2>Give us your e-mail so we can give you 25% off next time you visit us</h2>
+          <h2>Subscribe and enjoy</h2>
+          <h1>20% off</h1>
+          <h2>your first purchase when you join our list</h2>
           <form onSubmit={handleSubmit}>
             {/* <input type="text" placeholder="First Name" required /> */}
             <input type="email" placeholder="Email" required />
@@ -47,7 +45,6 @@ const JoinCommunityPopup = () => {
             <button type="submit">Get Offers</button>
           </form>
         </div>
-      </div>
     </div>
   );
 };
