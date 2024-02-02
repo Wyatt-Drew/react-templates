@@ -38,7 +38,7 @@ const JoinCommunityPopup = () => {
           <h2>Subscribe and enjoy</h2>
           <h1>20% off</h1>
           <h2>your first purchase when you join our list</h2>
-          <form onSubmit={handleSubmit}>
+          <form className = "popupForm" onSubmit={handleSubmit}>
             {/* <input type="text" placeholder="First Name" required /> */}
             <input type="email" placeholder="Email" required />
             {/* <input type="tel" placeholder="Phone Number" required /> */}
