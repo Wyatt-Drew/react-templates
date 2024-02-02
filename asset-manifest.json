@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/react-templates/static/css/main.e462f498.css",
+    "main.js": "/react-templates/static/js/main.10bb966f.js",
+    "static/js/787.78658b74.chunk.js": "/react-templates/static/js/787.78658b74.chunk.js",
+    "static/media/LoZ.gif": "/react-templates/static/media/LoZ.a24b9bc42fd3b9de899e.gif",
+    "static/media/asperagus.jpg": "/react-templates/static/media/asperagus.6b5e3f6543d3fa70d2cf.jpg",
+    "static/media/grass.jpg": "/react-templates/static/media/grass.b671595a22bdf4306caa.jpg",
+    "static/media/farming.png": "/react-templates/static/media/farming.1cce8f2cbe26f30cd8be.png",
+    "static/media/profile_pic.jpg": "/react-templates/static/media/profile_pic.26aadc94747cf90eff67.jpg",
+    "index.html": "/react-templates/index.html",
+    "main.e462f498.css.map": "/react-templates/static/css/main.e462f498.css.map",
+    "main.10bb966f.js.map": "/react-templates/static/js/main.10bb966f.js.map",
+    "787.78658b74.chunk.js.map": "/react-templates/static/js/787.78658b74.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e462f498.css",
+    "static/js/main.10bb966f.js"
+  ]
+}
